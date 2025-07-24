@@ -1,0 +1,185 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+/* Container setup */
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* Navbar */
+.navContainer {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+}
+
+#navList {
+  padding: 15px;
+  list-style: none;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navLogo {
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.navItems {
+  display: flex;
+  gap: 40px;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentBox {
+  width: 60%;
+  margin: 3rem auto;
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 2px 2px 20px rgb(26, 26, 26);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Right Box - Image with overlay effect */
+.rightBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  box-shadow: 1px 1px 20px rgba(26, 26, 26, 0.6);
+
+}
+
+.rightBox img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.rightBox .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rightBox:hover {
+  transform: scale(1.05);
+}
+
+.rightBox:hover .overlay {
+  opacity: 1;
+}
+
+/* Left Box */
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.leftBox h2 {
+  font-size: 2rem;
+}
+
+.ingBox {
+  font-size: 1.3rem;
+}
+
+.recipeBox {
+  font-size: 1.1rem;
+}
+
+/* Responsive (Optional) */
+@media (max-width: 768px) {
+  .contentBox {
+    width: 90%;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navItems {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer {
+  background-color: #2a7b9b;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

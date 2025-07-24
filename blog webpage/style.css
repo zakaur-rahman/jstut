@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 95vw;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog_header {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  gap: 10px;
+}
+.blog_header h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.header_desc {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 768px;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 1250px;
+}
+.card_container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(161, 162, 163);
+  border-radius: 10px;
+  overflow: hidden;
+  width: auto;
+}
+
+.card_image_container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: auto 2;
+  max-height: 10rem;
+}
+.card_image {
+  position: absolute;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  transition: all 0.5s linear;
+}
+
+.card_image:hover {
+  transform: scale(1.1);
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-self: center;
+}
+.card_title {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.card_title:hover {
+  color: blue;
+}
+.card_desc {
+  font-size: 0.9rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(94, 94, 94);
+}
+
+.card_footer {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+}
+
+.author_container {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.author_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author_title {
+  font-weight: bold;
+  color: #1438ff;
+}
+
+.author_info span:not(.author_title) {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  color: rgb(94, 94, 94);
+}
+
+.author_avtar {
+  width: 40px;
+  border-radius: 100%;
+  border: 1px solid rgb(83, 83, 83);
+}
+
+.card_tag {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgb(94, 99, 94);
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_tag span {
+  text-align: center;
+  color: rgb(94, 94, 94);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 1080px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+}
